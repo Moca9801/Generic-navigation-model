@@ -32,20 +32,19 @@ import { MainComponent } from './components/main/main.component';
 import { DashboardFooterComponent } from './components/dashboard-footer/dashboard-footer.component';
 import { AdminPermissionsComponent } from './pages/admin-permissions/admin-permissions.component';
 import { AdminUsersModule } from './pages/admin-users/admin-users.module';
+import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    HeaderComponent,
     SearcherComponent,
     ArchivoGeneralCapturaComponent,
     DatosDelJuzgadoInformacionComponent,
     CuadranteRegistrarExpedienteComponent,
-    MainComponent,
     DashboardFooterComponent,
     AdminPermissionsComponent,
+    DashboardComponent,
     
   ],
   imports: [
@@ -68,7 +67,10 @@ import { AdminUsersModule } from './pages/admin-users/admin-users.module';
     UsuariosEliminarComponent,
     ArchivoGeneralLimpiarListaComponent,
     CatalogosTipoJuicioComponent,
-    AdminUsersModule
+    AdminUsersModule,
+    FooterComponent,
+    HeaderComponent,
+    MainComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
