@@ -1,0 +1,33 @@
+@import '../assets/styles/vars.scss';
+
+main{
+    padding-right: 0px;
+    padding-top: 64px;
+    padding-bottom: 0px;
+    min-height: 300px;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.content-router{
+    border-radius: 30px;
+    background-color: $gray-back;
+    width: 95%;
+    margin-bottom: 5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 768px){
+    main{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .content-router{
+        width: 100%;
+        padding: .8rem;
+    }
+}

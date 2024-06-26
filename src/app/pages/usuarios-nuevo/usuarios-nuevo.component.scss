@@ -1,0 +1,25 @@
+@import '../../../assets/styles/vars.scss';
+@import '../../../styles.scss';
+
+.signup{
+    border-radius: 15px;
+    background-color: $gray-back;
+    width: 45%;
+}
+
+@media only screen and (max-width: 768px){
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signup{
+        width: 100%;
+    }
+
+    .table-container{
+        width: 100% !important;
+        height: 200px !important;
+        margin-bottom: 1rem;
+    }
+}

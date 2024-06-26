@@ -1,0 +1,23 @@
+<header [class.activate-flag-menu]="activateClase" [class.disable-flag-menu]="disableClase">
+  <div class="d-flex align-items-center justify-content-between flex-row" style="width: 100%;">
+    <div class="autocomplete">
+      <i class="fa fa-bars input-icon p-3 d-none d-md-block" (click)="hiddenDrawer()"></i>
+      <i class="fa fa-bars input-icon p-3 d-block d-md-none" (click)="showDrawerForSmallDevices()"></i>
+      <input class="p-5 pt-2 pb-2" type="text" [value]="userInput" (input)="onInputChange($event)" placeholder="Buscar">  
+      <div *ngIf="filteredCountries.length > 0" class="autocomplete-items">
+        <div *ngFor="let country of filteredCountries" (click)="selectCountry(country)">
+          {{ country }}
+        </div>
+      </div>
+    </div>
+    <div class="login-container">
+      <span class="ingresar"  (click)="exit()">Salir</span>
+      <img style=" height: 25px; display: inline-block; margin: 0 10px 0 10px; " src="../../../assets/img/vbar.svg" alt="" />
+      <img style="height: 2vw; min-height: 45px; display: inline-block;" class="dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" src="../../../assets/img/avatar.svg" alt="" />
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="border: none !important;   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+        <li><a class="dropdown-item"></a></li>
+        <li><a class="dropdown-item"></a></li>
+      </ul>
+    </div>
+  </div>
+</header>

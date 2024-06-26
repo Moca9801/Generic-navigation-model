@@ -1,0 +1,44 @@
+<nav>
+  <div class="content-img mb-3">
+    <img src="../../../assets/img/CJJ-1.png">
+  </div>
+
+  <div class="navDrawer-content"> 
+    <div class="content-list">
+      <div class="accordion accordion-flush accordion-content" id="accordionFlushExample">
+        <div class="accordion-item" *ngFor="let item of navigationItems; let i = index">
+          <h2 class="accordion-header mt-3">
+            <button class="accordion-button  collapsed d-flex justify-content-between" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse' + i" [attr.aria-controls]="'flush-collapse' + i" (click)="handelSectionClick(item.section)" [ngClass]="{'accordion-button-focus': item.section === activeSection}" > {{ item.section }}
+              <i class="fa fa-chevron-down" *ngIf="item.section === activeSection; else elseBlock"></i>
+              <ng-template #elseBlock>
+                <i class="fa fa-chevron-up"></i>
+              </ng-template>
+            </button>
+          </h2>
+
+          <div *ngFor="let subItem of item.items">
+            <div *ngIf="subItem===activeItem; else elseBlock">
+              <div [attr.id]="'flush-collapse' + i" class="accordion-collapse" [ngClass]="{'collapse': !isExpanded, 'show': isExpanded}" data-bs-parent="#accordionFlushExample">
+                <div class="list-group">
+                  <a class="list-group-item list-group-item-action mt-0"  (click)="handleItemClick(item.section, subItem)" [ngClass]="{'active': subItem === activeItem}">
+                     {{ subItem }}
+                  </a>
+                </div>
+              </div>      
+            </div> 
+            
+            <ng-template #elseBlock>
+              <div [attr.id]="'flush-collapse' + i" class="accordion-collapse" [ngClass]="{'collapse': !isExpandedb, 'show': isExpandedb}" data-bs-parent="#accordionFlushExample">
+                <div class="list-group">
+                  <a class="list-group-item list-group-item-action"  (click)="handleItemClick(item.section, subItem)" [ngClass]="{'active': subItem === activeItemb}">
+                     {{ subItem }}
+                  </a>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

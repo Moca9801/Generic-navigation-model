@@ -1,0 +1,67 @@
+<div class="box">
+    <div class="actions">
+        <div class="d-flex align-items-center">
+            <h1>Administrador  <strong style="color: gray;">-</strong>  Permisos</h1>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
+            <div class="d-flex align-items-center justify-content-start" style="width: 50%;">
+              <div class="input-with-icon" style="width: 40%;">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Nombre" (input)="filterByUser($event)">
+              </div>
+          
+              <div class="input-with-icon" style="width: 60%;">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Juzgado">
+              </div>
+            </div>
+
+            <div class="d-none d-sm-block">
+                <button type="button" class="btn btn-action m-1" (click)="guardarCambios()"><i class="fa fa-check"></i> Guardar </button>
+                <button type="button" class="btn btn-cancel m-1"><i class="fa fa-times" ></i> Cancelar</button>
+            </div>
+        
+            <div class=" d-block d-sm-none mt-2">
+              <div class="btn-group btn-group-sm" role="group" aria-label="Small button group" style="width: 100% !important;">
+                <button type="button" class="btn btn-action" (click)="guardarCambios()"><i class="fa fa-check"></i> Guardar </button>
+                <button type="button" class="btn btn-cancel"><i class="fa fa-times" ></i> Cancelar</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+   <!-- tabla-permisos.component.html -->
+    <div class="d-flex align-items-start table-height mt-4">
+        <div class="table-container">
+          <div class="table-header">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="th" *ngFor="let header of tableHeaders" scope="col">{{ header }}</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="table-contain">
+            <table class="table table-hover">
+              <tbody>
+                <tr *ngFor="let item of filteredData">
+                  <td>{{ item.username }}</td>
+                  <td>{{ item.name }}</td>
+                  <td><input class="checkbox form-check-input custom-checkbox" type="checkbox" [checked]="item.write"  (change)="onCheckboxChange(item, 'write', $event)"></td>
+                  <td><input class="checkbox form-check-input custom-checkbox" type="checkbox" [checked]="item.update" (change)="onCheckboxChange(item, 'update', $event)"></td>
+                  <td><input class="checkbox form-check-input custom-checkbox" type="checkbox" [checked]="item.select" (change)="onCheckboxChange(item, 'select', $event)"></td>
+                  <td><input class="checkbox form-check-input custom-checkbox" type="checkbox" [checked]="item.delete" (change)="onCheckboxChange(item, 'delete', $event)"></td>
+                    <td>{{ calcularTotal(item.write, item.update, item.select, item.delete) }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+

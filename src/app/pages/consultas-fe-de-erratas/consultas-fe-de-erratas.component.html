@@ -1,0 +1,55 @@
+<div class="box">
+  <div class="actions">
+    <div class="d-flex align-items-center">
+      <h1>Consultas  <strong style="color: gray;">-</strong>  Fe de Erratas</h1>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="input-container-date d-flex align-items-center m-2" style="width: 60%;">
+        <input type="date" (change)="searchByDate($event)" placeholder="Seleccione una fecha">
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center m-2">
+      <div style="display: flex; align-items: start; font-size: large;">Fe de Erratas</div>
+    </div>
+  </div>
+
+  <div class="d-flex align-items-start">
+    <div *ngIf = "!noResultsQuery; else noResults" class="table-container">
+      <div class="table-header">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="th" *ngFor="let header of tableHeaders_1" scope="col">{{ header }}</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div *ngFor="let rowData of tableData_1" class="table-contain">
+        <table  class="table table-hover">
+          <tbody>
+            <tr >
+              <td>{{rowData.fecha}}</td>
+              <td>{{rowData.cve_juz}}</td>
+              <td>{{rowData.fe}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <ng-template #noResults>
+      <div class="align-items-center">
+      <h3> No se encontro fe de errata en la fecha proporcionada</h3>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+
+
+
+
+
+
+

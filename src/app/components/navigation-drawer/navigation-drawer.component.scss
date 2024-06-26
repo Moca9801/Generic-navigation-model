@@ -1,0 +1,142 @@
+@import '../../../assets/styles/vars.scss';
+
+.accordion-button::after{
+  display: none;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+nav{
+  left: 0px;
+  z-index: 1000;
+  transform: translateX(0%);
+  position: fixed;
+  height: calc((100% - 0px) - 0px);
+  width: 250px;
+  background-color: white;
+  padding-right: 5px;
+  border-radius: 0px !important; 
+  height: 85%;
+}
+
+.content-img{
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 90%;
+  height: 90%;
+  visibility: hidden;
+
+}
+  
+.navDrawer-content{
+  flex: 0 1 auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90%;
+}
+
+.content-list{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.accordion-button{
+  background-color: white ;
+  border-radius: 0px 30px 30px 0px !important;
+  height: 40px;
+  color: black;
+  box-shadow: none;
+  outline: none;
+  font-family: $theme-font;
+  font-weight: 500;
+
+}
+
+.accordion-button-focus{
+  background: rgb(42,150,98);
+  background: linear-gradient(90deg, rgba(42,150,98,1) 0%, rgba(22,81,68,1) 50%, rgba(22,81,68,1) 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.accordion-button:hover{
+  background-color: $gray-back;
+}
+
+.accordion-content{
+  width: 90%;
+}
+
+.accordion-item{
+  background-color: white ;
+}
+
+.accordion-header{
+  background-color: white ;
+  color: $green;
+}
+
+.list-group{
+  width: 100%;
+  border-radius: 30px;
+}
+
+a{
+  display: flex;
+  align-items: center;
+  border-radius: 0px 30px 30px 0px !important;
+  background-color: white;
+  border: 0px;
+  width: 90%;
+  height: 40px;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.active{
+  background: linear-gradient(white, white) padding-box, linear-gradient(40deg, $green, $soft-green) border-box;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  border-left: none;
+  color: black;
+  font-weight: 500;
+  margin: .5rem;
+  margin-left: 0px;
+}
+
+
+@media only screen and (max-width: 768px){
+  nav{
+    position: fixed;
+    display: block;
+    z-index: 2000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;  
+    height: 100%;
+  }
+
+  img{
+    visibility: visible;
+  }
+
+  .accordion-button{
+    font-size: small;
+  }
+
+  .accordion-item{
+    font-size: small;
+  }
+
+}

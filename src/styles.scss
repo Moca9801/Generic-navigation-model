@@ -1,0 +1,188 @@
+@import '../src/assets/styles/vars.scss';
+
+.btn-action{
+  background: linear-gradient(40deg, $green, $soft-green);
+  color: white;
+  border: none !important;
+}
+
+.btn-action:hover{
+  background: linear-gradient(-0deg, $green, $soft-green) !important;
+  color: $gray !important;
+}
+
+.btn-cancel{
+  background: linear-gradient(white, white) padding-box, linear-gradient(40deg, $green, $soft-green) border-box;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+
+.btn-cancel:hover{
+  background: linear-gradient(white, white) padding-box, linear-gradient(-40deg, $green, $soft-green) border-box;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  color: $darkGray;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.box{
+    max-height: 100%;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: $gray-back;
+}
+
+.actions{
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Para que estén en la parte superior */
+    height: auto;
+    background-color: $gray-back;
+    padding: 0;
+    margin: 0;
+}
+
+//Style of input
+.input-with-icon {
+    position: relative;
+    display: inline-block;
+    margin: .2rem;
+}
+.input-with-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-with-icon input {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 30px; /* Ajusta el valor según el ancho del ícono */
+    border-radius: 15px;
+    border: 1px solid $darkGray;
+    width: 100%;
+}
+.input-with-icon input:hover {
+    border: 1px solid $black;
+}
+.input-with-icon input:disabled {
+    background-color: $gray-back;
+    border: 1px solid $gray-back;
+    cursor: default;
+}
+.input-with-icon input::placeholder {
+    color: $mid-gray;
+}
+
+input[type="date"] {
+    padding: .5rem;
+    border-radius: 15px;
+    border: 1px solid $darkGray;
+    width: 100%;
+}
+input:hover{
+    cursor: pointer;
+    border: 1px solid $black;
+}
+input[type="date"]:disabled {
+    background-color: $gray-back;
+    border: 1px solid $gray-back;
+    cursor: default;
+}
+
+select{
+    border-radius: 15px !important; 
+    border: 1px solid $darkGray !important;
+}
+select:focus{
+    border: 2px solid black !important;
+    box-shadow: none !important;
+}
+select:disabled{
+    background-color: $gray-back !important;
+    border: 1px solid $gray-back !important;
+    color: $mid-gray !important;
+}
+
+.checkbox:checked{
+    background-color: $green;
+    border: none;
+}
+.custom-checkbox{
+    box-shadow: none;
+    outline: none;
+}
+
+//TABLAS
+.table-container {
+    max-height: 100%; /* Establece la altura máxima del contenedor */
+    overflow: auto; /* Agrega barras de desplazamiento cuando sea necesario */
+    width: 100%;
+    border-radius: 15px;
+    z-index: 0;
+}
+.table-header {
+    position: sticky;
+    top: 0;
+    background-color: white; 
+    z-index:0;
+    border-radius: 15px;
+    height: 2rem; 
+}
+.table th, .table td {
+    width: 14%; /* Puedes ajustar el valor según tus necesidades */
+    font-size: smaller;
+    text-align: center;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    white-space: nowrap; /* Evita el salto de línea */
+    text-overflow: ellipsis;
+}
+.th{
+    background-color: black;
+    color: white;
+}
+::-webkit-scrollbar {
+    height: fit-content;
+    width: 2px; /* Ancho de la barra de desplazamiento */
+    height: 2px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0); /* Color del deslizador */
+    border-radius: 6px; /* Borde redondeado */
+}
+
+.modal-backdrop{
+    position: fixed !important;
+}
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+
+html, body { 
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  body { 
+    margin: 0; 
+    font-family: $theme-font; 
+    background-color: white; 
+  }
+  *{ 
+    font-family: $theme-font;
+  }
+

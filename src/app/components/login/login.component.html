@@ -1,0 +1,38 @@
+<div *ngIf="login_acces == 'true'" class="alert alert-success" role="alert">
+  Acceso permitido
+</div>
+<div *ngIf="login_acces == 'false'" class="alert alert-danger" role="alert">
+  Acceso denegado
+</div>
+
+<div class="login">
+  <div class="text-center my-5">
+    <img src="../../../assets/img/CJJ-1.png" alt="Bootstrap" width="338" height="120">
+  </div>
+  <div class="text-end">
+    <div>
+      <div class="mb-4 mx-5 input-group-lg">
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Usuario" name="email" id='email' required [(ngModel)]="username" />
+          <label for="name" class="form__label">Usario</label>
+            <div *ngIf="!username" class="text-danger d-flex justify-content-start align-items-center">El correo electrónico es obligatorio.</div>
+        </div>
+      </div>
+      <div class="mb-3 mx-5 input-group-lg">
+        <div class="form__group field">
+          <input type="password" id="keyp"class="form__field" placeholder="password" id='password' required [(ngModel)]="password" name="password" />
+          <label for="name" class="form__label">Contraseña</label>
+          <div *ngIf="!password" class="text-danger  d-flex justify-content-start align-items-center">La contraseña es obligatoria.</div>
+        </div>
+      </div>
+      <div class="row mx-5">
+        <a id="forgotPassword" class="form-text col" href="#">Olvidé mi contraseña</a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center d-grid">
+    <button type="button" class="btn btn-action btn-login m-5 px-5" (click)="login()">Iniciar sesión</button>
+  </div>  
+</div>
+
+  

@@ -1,0 +1,141 @@
+@import '../../../assets/styles/vars.scss';
+
+header{
+  background-position-y: 0 !important;
+  background-repeat: no-repeat !important;
+  height: 4rem !important;
+  width: 100vw !important;
+  background-size: 100% !important;
+  background: linear-gradient(to bottom, transparent, white), url('../../../assets/img/menu.svg');
+}
+
+.activate-flag-menu{
+    top: 0px;
+    z-index: 1004;
+    transform: translateY(0%);
+    position: fixed;
+    width: calc((100% - 0px) - 0px);
+    height: 4rem;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disable-flag-menu{
+    top: 0px;
+    z-index: 1004;
+    transform: translateY(0%);
+    position: fixed;
+    width: calc((100% - 0px) - 0px);
+    height: 4rem;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+.input-icon {
+    position: absolute;
+    left: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+  }
+
+.autocomplete {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 250px;
+    padding-left: 3rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: .1rem;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  }
+
+  .autocomplete-items {
+    position: absolute;
+    background-color: black;
+    color: white;
+    border: none;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 10px;
+    width: 100%;
+    top: 50px;
+    left: 0;
+  }
+
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .autocomplete-items div:hover {
+    background-color: rgb(16, 16, 16);
+  }
+
+  .login-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+    span, img {
+      cursor: pointer;
+    }
+  }
+
+@media only screen and (max-width: 768px){
+
+    .activate-flag-menu{
+        width: calc((100% - 0px) - 0px);
+        left: 0 !important;
+    }
+    .disable-flag-menu{
+        width: calc((100% - 0px) - 0px);
+        left: 0 !important;
+    }
+
+    select{
+        width: 20%;
+    }
+    select:focus{
+        width: 20%;
+    }
+
+    optgroup{
+        font-size: small;
+        height: 800px;
+        overflow: auto;
+    }
+
+    .autocomplete {
+      margin-left: 0px;
+      padding-left: 2rem;
+    }
+
+    .input-icon {
+      left: 2rem;
+    }
+
+
+}
+

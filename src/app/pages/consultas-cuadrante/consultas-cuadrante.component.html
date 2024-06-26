@@ -1,0 +1,121 @@
+<div class="box">
+  <div class="actions">
+    <div class="d-flex align-items-center">
+      <h1>Consultas  <strong style="color: gray;">-</strong>  Cuadrante (acuerdos)</h1>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-between flex-wrap">
+      <div class="d-flex align-items-center justify-content-start" >
+        <div class="input-with-icon" style="width: 100%;">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Expediente">
+        </div>
+      </div>
+
+      <div class="d-none d-sm-block">
+        <button class="btn btn-sm btn-dark col m-1"><i class="fa fa-print"></i> Imprimir </button>
+        <button class="btn btn-sm btn-dark m-1"><i class="fa fa-file-text"></i> Localizar Expediente</button>
+      </div>
+
+      <div class=" d-block d-sm-none mt-2" style="width: 100%;">
+        <div class="btn-group btn-group-sm" role="group" aria-label="Small button group" style="width: 100% !important;">
+          <button type="button" class="btn btn-dark"><i class="fa fa-print"></i> Imprimir </button>
+          <button type="button" class="btn btn-dark"><i class="fa fa-file-text"></i> Localizar Expediente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between m-3">
+    <div class="row row-cols-1 justify-content-center">
+      <div class="col data-title">
+        Tipo de juicio
+      </div>
+      <div class="col data-text">
+        Lorem
+      </div>
+    </div>
+    <div class="row row-cols-1 justify-content-center">
+      <div class="col data-title">
+        último acuerdo
+      </div>
+      <div class="col data-text">
+        -- / -- / ----
+      </div>
+    </div>
+    <div class="row row-cols-1 justify-content-center">
+      <div class="col data-title">
+        Última promoción
+      </div>
+      <div class="col data-text">
+        -- / -- / ----
+      </div>
+    </div>
+  </div>
+  
+  <div class="d-flex align-items-center">
+    <div  style="font-size: medium;">Expedientes</div>
+  </div>
+  
+  <div class="d-flex align-items-start  table-height">
+    <div class="table-container">
+      <div class="table-header">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="th" *ngFor="let header of tableHeaders_1" scope="col">{{ header }}</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="table-contain">
+        <table class="table table-hover">
+          <tbody>
+            <tr *ngFor="let rowData of tableData_1">
+              <td *ngFor="let cellData of rowData">{{ cellData }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div class="d-flex align-items-center">
+    <div style="font-size: medium;">Acuerdos</div>
+  </div>
+  
+  <div class="d-flex align-items-start table-height">
+    <div class="table-container">
+      <div class="table-header">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="th" *ngFor="let header of tableHeaders_2" scope="col">{{ header }}</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="table-contain">
+        <table class="table table-hover">
+          <tbody>
+            <tr *ngFor="let rowData of tableData_2">
+              <td *ngFor="let cellData of rowData">{{ cellData }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <div class="d-flex justify-content-between">
+    <div style="display: flex; align-items: center; font-size: small;">Registros encontrados: 0</div>
+    <div class="form-check form-switch d-flex justify-content-between">
+      <input class="form-check-input m-2 p-2 checkbox custom-checkbox" type="checkbox" id="flexSwitchCheckReverse" [(ngModel)]="demandaInicial" (change)="handleChange()">
+      <label class="form-check-label" for="flexCheckDefault" style="display: flex; align-items: center; font-size: small;"> Mostrar extracto</label>
+    </div>
+  </div>
+  
+  <div class="d-flex align-items-center justify-content-center" *ngIf="demandaInicial === true">
+    <div  class="p-2 extract" style="font-size: small;" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. In corporis necessitatibus quibusdam sunt provident commodi illo nihil quae consequatur, ullam accusamus at esse quis iste quas quidem delectus officia ex?</div>
+  </div>
+</div>

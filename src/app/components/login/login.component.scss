@@ -1,0 +1,72 @@
+
+@import '../../../assets/styles/vars.scss';
+
+.btn-login{
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 15px !important;
+}
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $darkGray;
+  outline: 0;
+  font-size: small;
+  color: black;
+  padding: .5rem;
+  background: $gray-back;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: small;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: small;
+  color: $darkGray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: small;
+    color: $green;
+    font-weight: 500;
+  }
+  padding-bottom: 6px;
+  font-weight: 500;
+  font-size: small;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $green, $soft-green);
+  border-image-slice: 1;
+}
+
+/* Reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}

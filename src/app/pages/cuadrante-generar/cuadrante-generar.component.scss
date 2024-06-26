@@ -1,0 +1,63 @@
+@import '../../../assets/styles/vars.scss';
+@import '../../../styles.scss';
+
+label {
+    font-size: 16px; /* Tamaño de fuente más pequeño que h2 */
+    color: rgba(0, 0, 0, 0.5); /* Color de texto difuminado */
+    white-space: nowrap;
+}
+
+.table-height{
+    height: 200px;
+}
+
+.extract{
+    background-color: $gray-back; 
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.1rem !important;
+    text-align: justify;
+}
+
+button{
+    font-size: small;
+}
+
+
+@media only screen and (max-width: 768px){
+    .input-container {
+        position: relative;
+        display: inline-block;
+        width: 40%;
+    }
+    input[type="text"] {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 30px; /* Ajusta el valor según el ancho del ícono */
+        border-radius: 15px;
+        border: 1px solid $darkGray;
+        width: 100%;
+    }
+    i{
+      position: absolute;
+      top: 50%;
+      left: 10px; /* Ajusta el valor según la posición deseada */
+      transform: translateY(-50%);
+    }
+
+    button{
+        font-size:xx-small !important;
+    }
+
+    .vr{
+        visibility: hidden;
+    }
+
+    .demanda{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
