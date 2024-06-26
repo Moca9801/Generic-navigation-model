@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
@@ -23,7 +24,7 @@ export class DefaultComponent implements OnInit{
   bandera2: boolean = false;
 
 
-  constructor(public sharedService: SharedService, private crudService: CrudService ){
+  constructor(private router: Router, public sharedService: SharedService, private crudService: CrudService ){
   }
 
   ngOnInit(): void {
@@ -32,7 +33,8 @@ export class DefaultComponent implements OnInit{
 
   async login(){
     try{      
-      this.sharedService.bandera = !this.sharedService.bandera;
+      this.router.navigate(['/dashboard']);
+
     }catch{
       this.login_acces = "false";
     }
