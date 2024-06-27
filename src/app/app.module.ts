@@ -38,13 +38,10 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SearcherComponent,
     ArchivoGeneralCapturaComponent,
     DatosDelJuzgadoInformacionComponent,
     CuadranteRegistrarExpedienteComponent,
-    DashboardFooterComponent,
     AdminPermissionsComponent,
-    DashboardComponent,
     
   ],
   imports: [
@@ -70,7 +67,10 @@ import { DashboardComponent } from './layouts/dashboard/dashboard.component';
     AdminUsersModule,
     FooterComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    DashboardComponent,
+    SearcherComponent,
+    DashboardFooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

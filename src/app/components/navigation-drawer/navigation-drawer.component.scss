@@ -15,10 +15,10 @@ nav{
   position: fixed;
   height: calc((100% - 0px) - 0px);
   width: 250px;
-  background-color: white;
   padding-right: 5px;
   border-radius: 0px !important; 
   height: 85%;
+  
 }
 
 .content-img{
@@ -52,14 +52,20 @@ img{
 }
 
 .accordion-button{
-  background-color: white ;
   border-radius: 0px 30px 30px 0px !important;
   height: 40px;
-  color: black;
+  color: rgb(255, 255, 255);
   box-shadow: none;
   outline: none;
   font-family: $theme-font;
   font-weight: 500;
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(100px);  border-radius: 0.25rem;
+  border: 1px solid #59DEA9;
+  border-left: none;
+  
 
 }
 
@@ -68,10 +74,12 @@ img{
   background: linear-gradient(90deg, rgba(42,150,98,1) 0%, rgba(22,81,68,1) 50%, rgba(22,81,68,1) 100%);
   color: white;
   font-weight: 600;
+  border: none;
 }
 
 .accordion-button:hover{
-  background-color: $gray-back;
+  background-color: black;
+  
 }
 
 .accordion-content{
@@ -79,11 +87,12 @@ img{
 }
 
 .accordion-item{
-  background-color: white ;
+  background-color: transparent ;
+  border: none !important;
 }
 
 .accordion-header{
-  background-color: white ;
+  background-color: transparent ;
   color: $green;
 }
 
@@ -96,7 +105,8 @@ a{
   display: flex;
   align-items: center;
   border-radius: 0px 30px 30px 0px !important;
-  background-color: white;
+  background-color: transparent;
+  color: white;
   border: 0px;
   width: 90%;
   height: 40px;
@@ -104,14 +114,22 @@ a{
 
 a:hover{
   cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);  border-radius: 0.25rem;
+  border: 1px solid #59DEA9;
+  border-left: none;
+
 }
 
 .active{
-  background: linear-gradient(white, white) padding-box, linear-gradient(40deg, $green, $soft-green) border-box;
-  border-radius: 0.25rem;
-  border: 2px solid transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);  border-radius: 0.25rem;
+  border: 1px solid #59DEA9;
   border-left: none;
-  color: black;
+  color: white;
   font-weight: 500;
   margin: .5rem;
   margin-left: 0px;

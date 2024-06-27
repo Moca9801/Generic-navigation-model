@@ -6,7 +6,6 @@ header{
   height: 4rem !important;
   width: 100vw !important;
   background-size: 100% !important;
-  background: linear-gradient(to bottom, transparent, white), url('../../../assets/img/menu.svg');
 }
 
 .activate-flag-menu{
@@ -18,7 +17,7 @@ header{
     height: 4rem;
     padding-top: 8px !important;
     padding-bottom: 8px !important;
-    background-color: white;
+    background-color:transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +32,7 @@ header{
     height: 4rem;
     padding-top: 8px !important;
     padding-bottom: 8px !important;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +44,7 @@ header{
     left: 3rem;
     top: 50%;
     transform: translateY(-50%);
-    color: black;
+    color: $gray-back;
     cursor: pointer;
   }
 
@@ -65,14 +64,20 @@ header{
     border: none;
     border-radius: 30px;
     outline: none;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: $soft-green 0px 1px 0px 0px;
+    background-color: black;
+    color: white;
+  }
 
+  .ingresar{
+    color: $soft-green !important;
+    font-weight: 600;
   }
 
   .autocomplete-items {
     position: absolute;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     border: none;
     max-height: 150px;
     overflow-y: auto;

@@ -12,16 +12,17 @@
 }
 
 .btn-cancel{
-  background: linear-gradient(white, white) padding-box, linear-gradient(40deg, $green, $soft-green) border-box;
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box, linear-gradient(40deg, $green, $soft-green) border-box;
   border-radius: 0.25rem;
   border: 1px solid transparent;
+  color: whitesmoke;
 }
 
 .btn-cancel:hover{
-  background: linear-gradient(white, white) padding-box, linear-gradient(-40deg, $green, $soft-green) border-box;
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box, linear-gradient(-40deg, $green, $soft-green) border-box;
   border-radius: 0.25rem;
   border: 1px solid transparent;
-  color: $darkGray;
+  color: white;
 }
 
 p {

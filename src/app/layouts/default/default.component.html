@@ -10,26 +10,26 @@
           <div class="input-group-lg">
             <div class="form__group field">
               <input type="input" class="form__field" placeholder="Usuario" name="email" id='email' required  (input)="detectchange()" [(ngModel)]="username" />
-              <label for="name" class="form__label">Usario</label>
-                <div *ngIf="bandera1" class="fs-6 fw-lighter text-danger d-flex justify-content-start align-items-center">El correo electrónico es obligatorio.</div>
+              <label for="name" class="form__label">Username or email</label>
+                <div *ngIf="bandera1" class="fs-6 fw-lighter text-danger d-flex justify-content-start align-items-center">The username or email is necessary.</div>
             </div>
           </div>
           <div class="input-group-lg d-flex flex-column align-items-end">
             <div class="form__group field">
               <input type="password" id="keyp"class="form__field" placeholder="password" id='password' required  (input)="detectchange()" [(ngModel)]="password" name="password" />
-              <label for="name" class="form__label">Contraseña</label>
-              <div *ngIf="bandera2" class="fs-6 fw-lighter text-danger  d-flex justify-content-start align-items-center">La contraseña es obligatoria.</div>
+              <label for="name" class="form__label">Password</label>
+              <div *ngIf="bandera2" class="fs-6 fw-lighter text-danger  d-flex justify-content-start align-items-center">The password is necessary.</div>
             </div>
-            <a id="forgotPassword" class="form-text" href="#">Olvidé mi contraseña</a>
+            <a id="forgotPassword" class="form-text" href="#">Forgot password</a>
           </div>
           
           <div class="text-center d-grid mt-3">
-            <button type="button" class="btn btn-action btn-login" (click)="login()">Iniciar sesión</button>
+            <button type="button" class="btn btn-action btn-login font-monospace" (click)="login()">Login</button>
           </div> 
-        </div>
-       
-        
-       
+          <div class="text-center d-grid mt-3">
+            <button type="button" class="btn btn-cancel font-monospace">Signin</button>
+          </div>   
+        </div>   
       </div>
     </div>
   </div>

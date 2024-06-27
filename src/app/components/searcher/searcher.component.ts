@@ -4,6 +4,7 @@ import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-searcher',
+  standalone: true,
   templateUrl: './searcher.component.html',
   styleUrls: ['./searcher.component.scss']
 })
