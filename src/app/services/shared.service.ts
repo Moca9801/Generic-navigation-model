@@ -18,55 +18,48 @@ export class SharedService {
   public activeSectionb: string | null = null;
   public navigationData = [
     {
-      section: 'Cuadrante',
+      section: 'Section 1',
       items: [
-        'Registrar expediente',
-        'Generar',
-        'Reporte',
-        'Modificar expediente',
-        'Registrar fecha',
-        'Partes'
+        'Item 1-1',
+        'Item 1-2',
+        'Item 1-3',
+        'Item 1-4',
+        'Item 1-5',
       ]
     },
     {
-      section: 'Consultas',
+      section: 'Section 2',
       items: [
-        'Cuadrante (acuerdos)',
-        'Expediente',
-        'Fe de Erratas'
-      ]
-    },
-    /*{
-      section: 'Usuarios',
-      items: [
-        'Nuevo',
-        'Eliminar'
-      ]
-    },*/
-    {
-      section: 'Archivo general',
-      items: [
-        'Captura',
-        'Limpiar lista',
+        'Item 2-1',
+        'Item 2-2',
+        'Item 2-3'
       ]
     },
     {
-      section: 'Catálogos',
+      section: 'Section 3',
       items: [
-        'Tipo de juicio'
+        'Item 3-1',
+        'Item 3-2',
       ]
     },
     {
-      section: 'Datos del juzgado',
+      section: 'Section 4',
       items: [
-        'Información'
+        'TItem 4-1'
       ]
     },
     {
-      section: 'Administrador',
+      section: 'Section 5',
       items: [
-        'Permisos',
-        'Usuarios',
+        'Item 5-1',
+        'Item 5-2'
+      ]
+    },
+    {
+      section: 'Admin',
+      items: [
+        'Permissions',
+        'Roles',
       ],
     },
   ];

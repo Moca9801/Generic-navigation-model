@@ -46,19 +46,21 @@ export class SearcherComponent implements OnInit{
 
   userInput: string = '';
   countries: string[] = [
-    "Registrar expediente",
-    "Generar",
-    "Reporte",
-    "Modificar expediente",
-    "Registrar fecha",
-    "Partes",
-    "Cuadrante (acuerdos)",
-    "Expediente",
-    "Fe de Erratas",
-    "Captura",
-    "Limpiar lista",
-    "Tipo de juicio",
-    "Información"
+    "Item 1-1",
+    "Item 1-2",
+    "Item 1-3",
+    "Item 1-4",
+    "Item 1-5",
+    "Item 2-1",
+    "Item 2-2",
+    "Item 2-3",
+    "Item 3-1",
+    "Item 3-2",
+    "Item 4-1",
+    "Item 5-1",
+    "Item 5-2",
+    "Permissions",
+    "Roles"
   ]
 
 
@@ -88,59 +90,66 @@ export class SearcherComponent implements OnInit{
 
     this.sharedService.activeItem = selectedValue;
     
-    if(selectedValue === 'Registrar expediente'){
-      this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./dashboard/cuadrante-registrar-expediente']);
+    if(selectedValue === 'Item 1-1'){
+      this.sharedService.activeSection = 'Section 1';
+      this.router.navigate(['./dashboard/item-1-1']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Generar'){
-      this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./dashboard/cuadrante-generar']);
+    }else if(selectedValue === 'Item 1-2'){
+      this.sharedService.activeSection = 'Section 1';
+      this.router.navigate(['./dashboard/item-1-2']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Reporte'){
-      this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./dashboard/cuadrante-report']);
+    }else if(selectedValue === 'Item 1-3'){
+      this.sharedService.activeSection = 'Section 1';
+      this.router.navigate(['./dashboard/item-1-3']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Modificar expediente'){
-      this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./dashboard/cuadrante-modificacion-exp']);
+    }else if(selectedValue === 'Item 1-4'){
+      this.sharedService.activeSection = 'Section 1';
+      this.router.navigate(['./dashboard/item-1-4']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Registrar fecha'){
-      this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./dashboard/cuadrante-registrar-fecha']);
-      this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Partes'){
-      this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./dashboard/cuadrante-partes']);
+    }else if(selectedValue === 'Item 1-5'){
+      this.sharedService.activeSection = 'Section 1';
+      this.router.navigate(['./dashboard/item-1-5']);
       this.sharedService.triggerRefresh();
     }
-    else if(selectedValue === 'Cuadrante (acuerdos)'){
-      this.sharedService.activeSection = 'Consultas';
-      this.router.navigate(['./dashboard/consultas-cuadrante']);
+    else if(selectedValue === 'Item 2-1'){
+      this.sharedService.activeSection = 'Section 2';
+      this.router.navigate(['./dashboard/item-2-1']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Expediente'){
-      this.sharedService.activeSection = 'Consultas';
-      this.router.navigate(['./dashboard/consultas-expedientes']);
+    }else if(selectedValue === 'Item 2-2'){
+      this.sharedService.activeSection = 'Section 2';
+      this.router.navigate(['./dashboard/item-2-2']);
       this.sharedService.triggerRefresh();
-    }
-    else if(selectedValue === 'Fe de Erratas'){
-      this.sharedService.activeSection = 'Consultas';
-      this.router.navigate(['./dashboard/consultas-fe-de-erratas']);
+    }else if(selectedValue === 'Item 2-3'){
+      this.sharedService.activeSection = 'Section 2';
+      this.router.navigate(['./dashboard/item-2-3']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Captura'){
-      this.sharedService.activeSection = 'Archivo general';
-      this.router.navigate(['./dashboard/archivoGeneral-captura']);
+    }else if(selectedValue === 'Item 3-1'){
+      this.sharedService.activeSection = 'Section 3';
+      this.router.navigate(['./dashboard/item-3-1']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Limpiar lista'){
-      this.sharedService.activeSection = 'Archivo general';
-      this.router.navigate(['./dashboard/archivoGeneral-limpiar-lista']);
+    }else if(selectedValue === 'Item 3-2'){
+      this.sharedService.activeSection = 'Section 3';
+      this.router.navigate(['./dashboard/item-3-2']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Tipo de juicio'){
-      this.sharedService.activeSection = 'Catálogos';
-      this.router.navigate(['./dashboard/catalogos-tipo-de-juicio']);
+    }else if(selectedValue === 'Item 4-1'){
+      this.sharedService.activeSection = 'Section 4';
+      this.router.navigate(['./dashboard/item-4-1']);
       this.sharedService.triggerRefresh();
-    }else if(selectedValue === 'Información'){
-      this.sharedService.activeSection = 'Datos del juzgado';
-      this.router.navigate(['./dashboard/datos-del-juzgado-informacion']);
+    }else if(selectedValue === 'Item 5-1'){
+      this.sharedService.activeSection = 'Section 5';
+      this.router.navigate(['./dashboard/item-5-1']);
+      this.sharedService.triggerRefresh();
+    }else if(selectedValue === 'Item 5-2'){
+      this.sharedService.activeSection = 'Section 5';
+      this.router.navigate(['./dashboard/item-5-2']);
+      this.sharedService.triggerRefresh();
+    }else if(selectedValue === 'Permissions'){
+      this.sharedService.activeSection = 'Admin';
+      this.router.navigate(['./dashboard/superadmin-permissions']);
+      this.sharedService.triggerRefresh();
+    }else if(selectedValue === 'Roles'){
+      this.sharedService.activeSection = 'Admin';
+      this.router.navigate(['./dashboard/superadmin-users']);
       this.sharedService.triggerRefresh();
     }
     this.filteredCountries = [];

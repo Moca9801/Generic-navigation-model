@@ -41,53 +41,47 @@ export class NavigationDrawerComponent {
     this.activeSection =  this.sharedService.activeSection = section;
     this.activeItemb = item;
   
-    if(section === 'Cuadrante'){
-      if(item === 'Registrar expediente'){
-        this.router.navigate(['./dashboard/cuadrante-registrar-expediente']);
-      }else if(item === 'Generar'){
-        this.router.navigate(['./dashboard/cuadrante-generar']);
-      }else if(item === 'Reporte'){
-        this.router.navigate(['./dashboard/cuadrante-report']);
-      }else if(item === 'Modificar expediente'){
-        this.router.navigate(['./dashboard/cuadrante-modificacion-exp']);
-      }else if(item === 'Registrar fecha'){
-        this.router.navigate(['./dashboard/cuadrante-registrar-fecha']);
-      }else if(item === 'Partes'){
-        this.router.navigate(['./dashboard/cuadrante-partes']);
+    if(section === 'Section 1'){
+      if(item === 'Item 1-1'){
+        this.router.navigate(['./dashboard/item-1-1']);
+      }else if(item === 'Item 1-2'){
+        this.router.navigate(['./dashboard/item-1-2']);
+      }else if(item === 'Item 1-3'){
+        this.router.navigate(['./dashboard/item-1-3']);
+      }else if(item === 'Item 1-4'){
+        this.router.navigate(['./dashboard/item-1-4']);
+      }else if(item === 'Item 1-5'){
+        this.router.navigate(['./dashboard/item-1-5']);
       }
-    }else if(section === 'Consultas'){
-      if(item === 'Cuadrante (acuerdos)'){
-        this.router.navigate(['./dashboard/consultas-cuadrante']);
-      }else if(item === 'Expediente'){
-        this.router.navigate(['./dashboard/consultas-expedientes']);
+    }else if(section === 'Setion 2'){
+      if(item === 'Item 2-1'){
+        this.router.navigate(['./dashboard/item-2-1']);
+      }else if(item === 'Item 2-2'){
+        this.router.navigate(['./dashboard/item-2-2']);
       }
-      else if(item === 'Fe de Erratas'){
-        this.router.navigate(['./dashboard/consultas-fe-de-erratas']);
+      else if(item === 'Item 2-3'){
+        this.router.navigate(['./dashboard/item-2-3']);
       }
-    }else if(section === 'Usuarios'){
-      if(item === 'Nuevo'){
-        this.router.navigate(['./dashboard/usuarios-nuevo']);
-      } else if(item === 'Eliminar'){
-        this.router.navigate(['./dashboard/usuarios-eliminar']);
+    }else if(section === 'Section 3'){
+      if(item === 'Item 3-1'){
+        this.router.navigate(['./dashboard/item-3-1']);
+      }else if(item === 'Item 3-2'){
+        this.router.navigate(['./dashboard/item-3-2']);
       }
-    }else if(section === 'Archivo general'){
-      if(item === 'Captura'){
-        this.router.navigate(['./dashboard/archivoGeneral-captura']);
-      }else if(item === 'Limpiar lista'){
-        this.router.navigate(['./dashboard/archivoGeneral-limpiar-lista']);
+    }else if(section === 'Section 4'){
+      if(item === 'Item 4-1'){
+        this.router.navigate(['./dashboard/item-4-1']);
       }
-    }else if(section === 'Catálogos'){
-      if(item === 'Tipo de juicio'){
-        this.router.navigate(['./dashboard/catalogos-tipo-de-juicio']);
+    } else if(section === 'Item 5'){
+      if(item === 'Item 5-1'){
+        this.router.navigate(['./dashboard/aitem-5-1'])
+      }else if(item === 'Item 5-2'){
+        this.router.navigate(['./dashboard/item-5-2'])
       }
-    } else if(section === 'Datos del juzgado'){
-      if(item === 'Información'){
-        this.router.navigate(['./dashboard/archivoGeneral-exportar'])
-      }
-    } else if(section === 'Administrador'){
-      if(item === 'Permisos'){
+    } else if(section === 'Admin'){
+      if(item === 'Permissions'){
         this.router.navigate(['./dashboard/superadmin-permissions'])
-      } else if(item === 'Usuarios'){
+      } else if(item === 'Roles'){
         this.router.navigate(['./dashboard/superadmin-users'])
       }
     }
