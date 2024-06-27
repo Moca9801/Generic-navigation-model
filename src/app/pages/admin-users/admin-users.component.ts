@@ -18,8 +18,20 @@ interface NewUser {
 })
 export class AdminUsersComponent implements OnInit{
   
-  tableHeaders = ['USUARIO', 'EMAIL', 'ROLE', 'DB-JUZGADO', 'DB-USER', 'DB-PASS', 'Acciones'];
-  tableData: NewUser[] = []
+  tableHeaders = ['USERNAME', 'EMAIL', 'ROLE', 'DB', 'DB-USER', 'DB-PASS', 'ACTIONS'];
+  tableData: NewUser[] = [ 
+    { username: 'aimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'bimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'cimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'dimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'eimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'fimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'aimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'aimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'aimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+    { username: 'aimc9801', email: 'example@gmail.com', password: '89hjwdmiomadms', role: 'superadmin', court_code: 'X2E', court_username: 'SD', court_password: 'ñlamsa7ismd.', },
+
+  ]
   filteredData: any = [];
 
   newUser: NewUser = {

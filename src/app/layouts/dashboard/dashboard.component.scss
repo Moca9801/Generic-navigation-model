@@ -22,7 +22,8 @@ main{
     background-color: rgba(0, 0, 0, 0.6);
     border: 1px solid #59DEA9;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);    
+    -webkit-backdrop-filter: blur(10px);   
+    z-index: 4000 !important; 
     width: 95%;
     margin-bottom: 5rem;
     text-align: center;

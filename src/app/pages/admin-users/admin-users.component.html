@@ -1,7 +1,7 @@
 <div class="box">
   <div class="actions">
     <div class="d-flex align-items-center">
-        <h1 class="tile-page">Administrador  <strong style="color: gray;">-</strong>  Usuarios</h1>
+        <h1 class="tile-page">Admin  <strong style="color: gray;">-</strong>  Roles</h1>
     </div>
 
     <div class="d-flex align-items-center justify-content-between flex-wrap">
@@ -18,7 +18,7 @@
       </div>
 
       <div class="d-none d-sm-block">
-        <button type="button" class="btn btn-action m-1" data-bs-toggle="modal" data-bs-target="#Modal" ><i class="fa fa-plus"></i> Crear usuario</button>
+        <button type="button" class="btn btn-action m-1" data-bs-toggle="modal" data-bs-target="#Modal" ><i class="fa fa-plus"></i> Create user</button>
       </div>     
     </div>
   </div>
@@ -27,12 +27,12 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Creación de nuevo usuario</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create new user</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body ">
-          <form>
-            <div class="mb-1">
+          <form >
+            <div class="mb-1" >
               <div class="input-with-icon" style="width: 100%;">
                 <i class="fa fa-user"></i>
                 <input type="text" placeholder="Capture un nombre de usuario" [(ngModel)]="newUser.username" name="username_newUser">
@@ -55,7 +55,7 @@
                 <input type="text" placeholder="Capture el rol" [(ngModel)]="newUser.role" name="role_newUser">
               </div>
             </div>
-            <label for="recipient-name" class="col-form-label">Datos para acceder a la base de datos del juzgado:</label>
+            <label for="recipient-name" class="col-form-label">Data for access to DB:</label>
             <div class="mb-1">
               <div class="input-with-icon" style="width: 100%;">
                 <i class="fa fa-gavel"></i>
@@ -79,8 +79,8 @@
          
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-action" data-bs-dismiss="modal" [disabled]="isSaveButtonDisabled()" (click)="createUser()"> <i class="fa fa-check"></i> Guardar</button>
-          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal" aria-label="close"><i class="fa fa-times"></i> Cancelar</button>
+          <button type="button" class="btn btn-action" data-bs-dismiss="modal" [disabled]="isSaveButtonDisabled()" (click)="createUser()"> <i class="fa fa-check"></i> Save</button>
+          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal" aria-label="close"><i class="fa fa-times"></i> Cancel</button>
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@
               <td>{{ item.court_username }}</td>
               <td>{{ item.court_password }}</td>
               <td>
-                <button type="button" class="btn"><i class="fa fa-pencil" data-bs-toggle="modal" data-bs-target="#ModalUpdate" (click)="getUserToUpdate(item)"></i></button>
+                <button type="button" class="btn"><i class="fa fa-pencil" data-bs-toggle="modal" data-bs-target="#ModalUpdate"  style="color: white;"(click)="getUserToUpdate(item)"></i></button>
                 <button type="button" class="btn"><i class="fa fa-trash" data-bs-toggle="modal" data-bs-target="#deleteModal" style="color: rgba(255, 0, 0, 0.711);" (click)="getUserToDelete(item)" ></i></button>
               </td>
             </tr>

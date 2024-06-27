@@ -33,7 +33,7 @@ interface BackendData {
 
 export class AdminPermissionsComponent implements OnInit {
   
-  tableHeaders = ['USUARIO', 'MODULO', 'WRITE', 'UPDATE', 'SELECT', 'DELETE', 'TOTAL'];
+  tableHeaders = ['USERNAME', 'MODULE', 'WRITE', 'UPDATE', 'SELECT', 'DELETE', 'TOTAL'];
   tableData: TableRow[] = [
     {username: 'ANGEL', name: 'GENERAR' , write: false, update: false, select: false, delete: false, total: 0, originalData: {write: true, update: true, select: true, delete: true}},
     {username: 'ANGEL', name: 'REPORTE' , write: false, update: false, select: false, delete: false, total: 0, originalData: {write: true, update: true, select: true, delete: true}},
