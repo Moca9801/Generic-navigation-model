@@ -2,9 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FooterComponent } from 'src/app/components/footer/footer.component';
-import { HeaderComponent } from 'src/app/components/header/header.component';
-import { LoginComponent } from 'src/app/components/login/login.component';
 import { CrudService } from 'src/app/services/crud.service';
 import { SharedService } from 'src/app/services/shared.service';
 
@@ -13,7 +10,7 @@ import { SharedService } from 'src/app/services/shared.service';
   standalone: true,
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.scss'],
-  imports:[CommonModule, HeaderComponent, LoginComponent, FooterComponent,FormsModule]
+  imports:[CommonModule,FormsModule]
 })
 export class DefaultComponent implements OnInit{
   username: string = '';

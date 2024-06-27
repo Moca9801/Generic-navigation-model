@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { LoginComponent } from './components/login/login.component';
 import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -51,15 +48,12 @@ import { Item52Component } from './pages/item5-2/item5-2.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoginComponent,
     MdbModalModule,
     HttpClientModule,
     RouterModule,
     BrowserAnimationsModule,
     NavigationDrawerComponent,
     AdminUsersModule,
-    FooterComponent,
-    HeaderComponent,
     DashboardComponent,
     SearcherComponent,
     DashboardFooterComponent

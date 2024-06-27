@@ -40,7 +40,7 @@ p {
     overflow-y: auto;
     width: 100%;
     height: 100vh;
-    background-color: $gray-back;
+    background-color: transparent;
 }
 
 .actions{
@@ -48,9 +48,13 @@ p {
     top: 0;
     z-index: 1; /* Para que estén en la parte superior */
     height: auto;
-    background-color: $gray-back;
+    background-color: transparent;
     padding: 0;
     margin: 0;
+}
+
+.tile-page{
+    color: white;
 }
 
 //Style of input

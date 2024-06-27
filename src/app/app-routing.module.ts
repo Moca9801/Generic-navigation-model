@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminPermissionsComponent } from './pages/admin-permissions/admin-permissions.component';
 import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
 import { DefaultComponent } from './layouts/default/default.component';
-import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { Item11Component } from './pages/item1-1/item1-1.component';
 import { Item12Component } from './pages/item1-2/item1-2.component';
@@ -24,7 +23,6 @@ const routes: Routes = [
     path: '',
     component: DefaultComponent,
     children: [
-        { path: 'login', component: LoginComponent }
     ]
   },
   {
