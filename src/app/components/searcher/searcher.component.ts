@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from 'src/app/services/shared.service';
@@ -6,7 +7,8 @@ import { SharedService } from 'src/app/services/shared.service';
   selector: 'app-searcher',
   standalone: true,
   templateUrl: './searcher.component.html',
-  styleUrls: ['./searcher.component.scss']
+  styleUrls: ['./searcher.component.scss'],
+  imports: [CommonModule]
 })
 export class SearcherComponent implements OnInit{
   isInputFocused = false;

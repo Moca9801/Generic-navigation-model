@@ -46,6 +46,7 @@ header{
     transform: translateY(-50%);
     color: $gray-back;
     cursor: pointer;
+    z-index: 4;
   }
 
 .autocomplete {
@@ -64,8 +65,10 @@ header{
     border: none;
     border-radius: 30px;
     outline: none;
-    box-shadow: $soft-green 0px 1px 0px 0px;
-    background-color: black;
+    border: 1px solid #59DEA9;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);    
     color: white;
   }
 
@@ -76,9 +79,11 @@ header{
 
   .autocomplete-items {
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    border: 1px solid #59DEA9;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);    
     color: rgb(255, 255, 255);
-    border: none;
     max-height: 150px;
     overflow-y: auto;
     border-radius: 10px;
@@ -93,7 +98,10 @@ header{
   }
 
   .autocomplete-items div:hover {
-    background-color: rgb(16, 16, 16);
+    background-color: #59DEA9;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);  
+    color: black;  
   }
 
   .login-container {
