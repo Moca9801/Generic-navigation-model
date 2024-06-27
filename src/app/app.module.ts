@@ -12,7 +12,6 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationDrawerComponent } from './components/navigation-drawer/navigation-drawer.component';
 import { SearcherComponent } from './components/searcher/searcher.component';
-import { MainComponent } from './components/main/main.component';
 import { DashboardFooterComponent } from './components/dashboard-footer/dashboard-footer.component';
 import { AdminPermissionsComponent } from './pages/admin-permissions/admin-permissions.component';
 import { AdminUsersModule } from './pages/admin-users/admin-users.module';
@@ -61,7 +60,6 @@ import { Item52Component } from './pages/item5-2/item5-2.component';
     AdminUsersModule,
     FooterComponent,
     HeaderComponent,
-    MainComponent,
     DashboardComponent,
     SearcherComponent,
     DashboardFooterComponent

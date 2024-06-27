@@ -53,7 +53,7 @@ export class NavigationDrawerComponent {
       }else if(item === 'Item 1-5'){
         this.router.navigate(['./dashboard/item-1-5']);
       }
-    }else if(section === 'Setion 2'){
+    }else if(section === 'Section 2'){
       if(item === 'Item 2-1'){
         this.router.navigate(['./dashboard/item-2-1']);
       }else if(item === 'Item 2-2'){
@@ -72,9 +72,9 @@ export class NavigationDrawerComponent {
       if(item === 'Item 4-1'){
         this.router.navigate(['./dashboard/item-4-1']);
       }
-    } else if(section === 'Item 5'){
+    } else if(section === 'Section 5'){
       if(item === 'Item 5-1'){
-        this.router.navigate(['./dashboard/aitem-5-1'])
+        this.router.navigate(['./dashboard/item-5-1'])
       }else if(item === 'Item 5-2'){
         this.router.navigate(['./dashboard/item-5-2'])
       }

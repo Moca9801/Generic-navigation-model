@@ -45,7 +45,7 @@ export class SharedService {
     {
       section: 'Section 4',
       items: [
-        'TItem 4-1'
+        'Item 4-1'
       ]
     },
     {
