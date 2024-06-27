@@ -90,57 +90,57 @@ export class SearcherComponent implements OnInit{
     
     if(selectedValue === 'Registrar expediente'){
       this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./cuadrante-registrar-expediente']);
+      this.router.navigate(['./dashboard/cuadrante-registrar-expediente']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Generar'){
       this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./cuadrante-generar']);
+      this.router.navigate(['./dashboard/cuadrante-generar']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Reporte'){
       this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./cuadrante-report']);
+      this.router.navigate(['./dashboard/cuadrante-report']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Modificar expediente'){
       this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./cuadrante-modificacion-exp']);
+      this.router.navigate(['./dashboard/cuadrante-modificacion-exp']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Registrar fecha'){
       this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./cuadrante-registrar-fecha']);
+      this.router.navigate(['./dashboard/cuadrante-registrar-fecha']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Partes'){
       this.sharedService.activeSection = 'Cuadrante';
-      this.router.navigate(['./cuadrante-partes']);
+      this.router.navigate(['./dashboard/cuadrante-partes']);
       this.sharedService.triggerRefresh();
     }
     else if(selectedValue === 'Cuadrante (acuerdos)'){
       this.sharedService.activeSection = 'Consultas';
-      this.router.navigate(['./consultas-cuadrante']);
+      this.router.navigate(['./dashboard/consultas-cuadrante']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Expediente'){
       this.sharedService.activeSection = 'Consultas';
-      this.router.navigate(['./consultas-expedientes']);
+      this.router.navigate(['./dashboard/consultas-expedientes']);
       this.sharedService.triggerRefresh();
     }
     else if(selectedValue === 'Fe de Erratas'){
       this.sharedService.activeSection = 'Consultas';
-      this.router.navigate(['./consultas-fe-de-erratas']);
+      this.router.navigate(['./dashboard/consultas-fe-de-erratas']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Captura'){
       this.sharedService.activeSection = 'Archivo general';
-      this.router.navigate(['./archivoGeneral-captura']);
+      this.router.navigate(['./dashboard/archivoGeneral-captura']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Limpiar lista'){
       this.sharedService.activeSection = 'Archivo general';
-      this.router.navigate(['./archivoGeneral-limpiar-lista']);
+      this.router.navigate(['./dashboard/archivoGeneral-limpiar-lista']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Tipo de juicio'){
       this.sharedService.activeSection = 'Catálogos';
-      this.router.navigate(['./catalogos-tipo-de-juicio']);
+      this.router.navigate(['./dashboard/catalogos-tipo-de-juicio']);
       this.sharedService.triggerRefresh();
     }else if(selectedValue === 'Información'){
       this.sharedService.activeSection = 'Datos del juzgado';
-      this.router.navigate(['./datos-del-juzgado-informacion']);
+      this.router.navigate(['./dashboard/datos-del-juzgado-informacion']);
       this.sharedService.triggerRefresh();
     }
     this.filteredCountries = [];
