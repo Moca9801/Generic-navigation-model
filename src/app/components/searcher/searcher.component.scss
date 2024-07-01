@@ -6,6 +6,8 @@ header{
   height: 4rem !important;
   width: 100vw !important;
   background-size: 100% !important;
+  position: relative;
+  z-index: 1;
 }
 
 .activate-flag-menu{
@@ -73,7 +75,7 @@ header{
   }
 
   .ingresar{
-    color: $soft-green !important;
+    color: white !important;
     font-weight: 600;
   }
 
@@ -84,12 +86,11 @@ header{
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);    
     color: rgb(255, 255, 255);
-    max-height: 150px;
+    max-height: 40vh;
     overflow-y: auto;
     border-radius: 10px;
     width: 100%;
     top: 50px;
-    left: 0;
   }
 
   .autocomplete-items div {

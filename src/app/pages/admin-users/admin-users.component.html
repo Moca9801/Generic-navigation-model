@@ -23,23 +23,24 @@
     </div>
   </div>
 
-  <div class="modal fade" id="Modal" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="Modal" tabindex="-2" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999 !important; position: absolute;">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
+      <div class="modal-content " style="border:1px solid white;  background-color: rgb(255, 255, 255) !important; z-index: 9999 !important;">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Create new user</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Create new user</h1>
+          <button type="button text-dark" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body ">
           <form >
             <div class="mb-1" >
               <div class="input-with-icon" style="width: 100%;">
-                <i class="fa fa-user"></i>
-                <input type="text" placeholder="Capture un nombre de usuario" [(ngModel)]="newUser.username" name="username_newUser">
-              </div>            </div>
+                <i class="fa fa-user text-dark"></i>
+                <input class="text-dark" type="text" placeholder="Capture un nombre de usuario" [(ngModel)]="newUser.username" name="username_newUser">
+              </div>            
+            </div>
             <div class="mb-1">
               <div class="input-with-icon" style="width: 100%;">
-                <i class="fa fa-envelope"></i>
+                <i class="fa fa-envelope text-dark"></i>
                 <input type="text" placeholder="Capture un correo electrónico válido" [(ngModel)]="newUser.email" name="email_newUser">
               </div>
             </div>
