@@ -7,7 +7,7 @@ import { SharedService } from './services/shared.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'TemplateBoletin';
+  title = 'TemplateGenericNavModel';
   widthDrawer: any;
   isMobile: boolean = false;
   helper: boolean = false;

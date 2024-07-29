@@ -14,7 +14,7 @@ import { SharedService } from 'src/app/services/shared.service';
   imports: [CommonModule, SearcherComponent, RouterOutlet, NavigationDrawerComponent, DashboardFooterComponent]
 })
 export class DashboardComponent implements OnInit{
-  title = 'TemplateBoletin';
+  title = 'TemplateGenericNavModel';
   widthDrawer: any;
   isMobile: boolean = false;
   helper: boolean = false;
