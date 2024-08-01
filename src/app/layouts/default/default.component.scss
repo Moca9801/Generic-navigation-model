@@ -1,86 +1,86 @@
 @import '../../../assets/styles/vars.scss';
 
 body, html {
-    background-image: url("../../../assets/img/image.jpg"),
-    linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;    
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000; /* Color de fondo para destacar el div flotante */
+  background-image: url("../../../assets/img/image.jpg"),
+  linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Color de fondo para destacar el div flotante */
 }
 
 .container {
-    height: 100vh; /* Asegura que el contenedor abarque toda la altura de la pantalla */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh; /* Asegura que el contenedor abarque toda la altura de la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .floating-div {
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid #59DEA9;
-    border-radius: 1px; /* Bordes redondeados */
-    width: 100%; /* Ancho del div */
-    height: 65%;
-    text-align: center; /* Centrar el contenido dentro del div */
-    display: grid; /* Utilizamos CSS Grid */
-    grid-template-columns: 35% 65%; /* Definimos las columnas con el tamaño deseado */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #59DEA9;
+  border-radius: 1px; /* Bordes redondeados */
+  width: 100%; /* Ancho del div */
+  height: 65%;
+  text-align: center; /* Centrar el contenido dentro del div */
+  display: grid; /* Utilizamos CSS Grid */
+  grid-template-columns: 35% 65%; /* Definimos las columnas con el tamaño deseado */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .left-panel {
-    padding: 10px; /* Espaciado interno */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 10px; /* Espaciado interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 img {
-    max-width: 80%;
-    height: auto;
-  }
+  max-width: 80%;
+  height: auto;
+}
 
 .right-panel {
-    background-color: #000;
-    padding: 2rem; /* Espaciado interno */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #000;
+  padding: 2rem; /* Espaciado interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form__group {
-    position: relative;
-    padding: 20px 0 0;
-    margin-top: 15px;
-    width: 100%;
+  position: relative;
+  padding: 20px 0 0;
+  margin-top: 15px;
+  width: 100%;
+}
+  
+.form__field {
+  font-family: monospace;
+  width: 100%;
+  border: 0;
+  border-bottom: 3px solid $darkGray;
+  outline: 0;
+  color: black;
+  padding: .5rem;
+  background: $gray-back;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
   }
-  
-  .form__field {
-    font-family: monospace;
-    width: 100%;
-    border: 0;
-    border-bottom: 3px solid $darkGray;
-    outline: 0;
-    color: black;
-    padding: .5rem;
-    background: $gray-back;
-    transition: border-color 0.2s;
-  
-    &::placeholder {
-      color: transparent;
-    }
-  
-    &:placeholder-shown 
-    ~ .form__label {
-        font-family: monospace;
-        cursor: text;
-        top: 20px;
-        left: .5rem;
+
+  &:placeholder-shown 
+  ~ .form__label {
+      font-family: monospace;
+      cursor: text;
+      top: 20px;
+      left: .5rem;
     }
   }
   
@@ -112,5 +112,19 @@ img {
   .form__field:required,
   .form__field:invalid {
     box-shadow: none;
-  }
+}
 
+
+@media (max-width: 780px) {
+  .floating-div{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 2rem;
+  }
+  img {
+    width: 60% !important;
+    height: auto;
+    margin: 2rem
+  } 
+}

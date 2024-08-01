@@ -22,17 +22,20 @@ export class DashboardComponent implements OnInit{
   @HostListener('document:click', ['$event'])
   documentClickHandler(event: MouseEvent) {
     const navDrawer = document.getElementById('navDrawer');
-    if (this.isMobile == true && this.sharedService.showDrawer == true && navDrawer && !navDrawer.contains(event.target as Node)) {
+    if (this.isMobile == true && this.sharedService.showDrawerForSmallDevices == true && navDrawer && !navDrawer.contains(event.target as Node)) {
       if(this.sharedService.showDrawerForSmallDevices){
-        this.sharedService.setShowDrawerState(true);        
         this.sharedService.setShowDrawerStateForSmallDevices(false);       
+        this.sharedService.setShowDrawerState(true);        
 
       }else{
+        this.sharedService.setShowDrawerStateForSmallDevices(true);       
         this.sharedService.setShowDrawerState(false); 
         // Aquí puedes realizar las acciones deseadas
       }
       // El clic ocurrió fuera de app-navigation-drawer
       //this.sharedService.setShowDrawerState(false);        // Aquí puedes realizar las acciones deseadas
+    }else{
+
     }
   }
  
@@ -41,9 +44,9 @@ export class DashboardComponent implements OnInit{
   ngOnInit(): void {
     this.sharedService.showDrawerState$.subscribe(event=>{
       if(event === true){
-        this.widthDrawer = '250px'
+        this.sharedService.setWidthDrawerState('250px');
       }else{
-        this.widthDrawer = '0px'
+        this.sharedService.setWidthDrawerState('0px');
       }
     })
 

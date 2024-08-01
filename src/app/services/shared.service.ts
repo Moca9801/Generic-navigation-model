@@ -87,6 +87,14 @@ export class SharedService {
     this.showDrawerForSmallDevices = newState;
     this.showDrawerForSmallDevicesState.next(newState);
   }
+
+  private widthDrawerState = new BehaviorSubject<string>(this.widthDrawer)
+  widthDrawerState$ = this.widthDrawerState.asObservable();
+
+  setWidthDrawerState(value: string){
+    this.widthDrawer = value;
+    this.widthDrawerState.next(value);
+  }
   
   triggerRefresh() {
     this.refreshComponent.next(true);

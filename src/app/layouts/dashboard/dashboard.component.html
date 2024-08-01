@@ -1,6 +1,6 @@
-<app-navigation-drawer id="navDrawer" *ngIf="sharedService.showDrawer == true"></app-navigation-drawer>
+<app-navigation-drawer id="navDrawer" *ngIf="sharedService.showDrawer == true || sharedService.showDrawerForSmallDevices == true"></app-navigation-drawer>
 <app-searcher></app-searcher>
-<main [style]="{'padding-left': this.widthDrawer}">
+<main [style]="{'padding-left': this.sharedService.widthDrawer}">
   <div class="content-router">
     <router-outlet></router-outlet>
   </div>

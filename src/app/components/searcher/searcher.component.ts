@@ -21,27 +21,16 @@ export class SearcherComponent implements OnInit{
   isLoggedIn: boolean = false;
   admin:boolean = false;
 
-
   constructor(public sharedService: SharedService, private router: Router){}
 
   ngOnInit(): void {}
 
   hiddenDrawer(){
     this.sharedService.setShowDrawerState(!this.sharedService.showDrawer);
-    
-    if(this.sharedService.showDrawer === true){
-      this.activateClase = true;
-      this.disableClase = false;
-    }else{
-      this.activateClase = false;
-      this.disableClase = true;
-    }
   }
 
   showDrawerForSmallDevices(){
-    this.sharedService.setShowDrawerStateForSmallDevices(true);
-    this.sharedService.setShowDrawerState(!this.sharedService.showDrawer);
-
+    this.sharedService.setShowDrawerStateForSmallDevices(!this.sharedService.showDrawerForSmallDevices);
   }
 
   userInput: string = '';
@@ -61,8 +50,7 @@ export class SearcherComponent implements OnInit{
     "Item 5-2",
     "Permissions",
     "Roles"
-  ]
-
+  ];
 
   filteredCountries: string[] = [];
 
